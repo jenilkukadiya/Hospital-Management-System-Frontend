@@ -23,13 +23,13 @@ const Register = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/patient/register",
+          `${API_URL}/api/v1/user/patient/register`,
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
           }
-        )
+        ) 
         .then((res) => {
           toast.success(res.data.message);
           setIsAuthenticated(true);

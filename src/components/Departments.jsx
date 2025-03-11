@@ -89,7 +89,7 @@ const Departments = () => {
         </Carousel>
       </div>
     </>
-  );
+  );  
 };
 
 export default Departments;
