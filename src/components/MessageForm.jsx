@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const MessageForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -8,6 +9,7 @@ const MessageForm = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+
 
   const handleMessage = async (e) => {
     e.preventDefault();
